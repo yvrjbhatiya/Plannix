@@ -1,0 +1,17 @@
+import 'dotenv/config';
+import http from 'http';
+import express from 'express';
+import cors from 'cors';
+import routes from './src/routes.js';
+import { initSocket } from './src/socket.js';
+import { connectDb } from './src/config/db.js';
+import { errorHandler } from './src/middleware.js';
+const app = express();
+app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }), express.json());
+app.get('/health', (_q, s) => s.json({ ok: true }));
+app.use('/api', routes);
+app.use(errorHandler);
+const server = http.createServer(app);
+initSocket(server);
+await connectDb();
+server.listen(process.env.PORT || 5050, () => console.log(`Flowboard API on :${process.env.PORT || 5050}`));
