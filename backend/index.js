@@ -14,4 +14,4 @@ app.use(errorHandler);
 const server = http.createServer(app);
 initSocket(server);
 await connectDb();
-server.listen(process.env.PORT || 5050, () => console.log(`Flowboard API on :${process.env.PORT || 5050}`));
+server.listen(process.env.PORT || 5050, () => console.log(`Plannix API on :${process.env.PORT || 5050}`));
