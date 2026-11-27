@@ -14,8 +14,7 @@ const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
 
-  const fillDemo = () =>
-    setForm({ email: "alex@timetoprogram.com", password: "Test@1234" });
+ 
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -62,7 +61,7 @@ const Login = () => {
                 id="email"
                 label="Email"
                 type="email"
-                placeholder="you@company.com"
+                placeholder="you@mail.com"
                 autoComplete="email"
                 required
                 value={form.email}
@@ -86,15 +85,7 @@ const Login = () => {
               >
                 Log in
               </Button>
-              <Button
-                type="button"
-                variant="outline"
-                size="lg"
-                className="w-full"
-                onClick={fillDemo}
-              >
-                Use demo account
-              </Button>
+              
             </form>
           </div>
 

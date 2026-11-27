@@ -35,7 +35,7 @@ const HeroSplit = () => (
           </Link>
           <Link to="/login">
             <Button size="lg" variant="outline">
-              Live demo
+              Log in
             </Button>
           </Link>
         </div>

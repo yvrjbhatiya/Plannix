@@ -120,7 +120,7 @@ const Hero = () => (
             </Link>
             <Link to="/login">
               <button className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/20">
-                Live demo
+                Log in
               </button>
             </Link>
           </div>
